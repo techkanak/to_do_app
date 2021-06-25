@@ -41,12 +41,13 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView.builder(
         itemCount: mytodo.length,
         itemBuilder: (context, index) {
-          return Dismissible(
-            key: Key(mytodo[index]),
-            child: Card(
-              child: ListTile(
-                title: Text(mytodo[index]),
+          return Card(
+            child: ListTile(
+              trailing: IconButton(
+                icon: Icon(Icons.delete),
+                onPressed: () {},
               ),
+              title: Text(mytodo[index]),
             ),
           );
         },
