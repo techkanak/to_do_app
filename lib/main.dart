@@ -45,7 +45,12 @@ class _MyHomePageState extends State<MyHomePage> {
             child: ListTile(
               trailing: IconButton(
                 icon: Icon(Icons.delete),
-                onPressed: () {},
+                color: Colors.red,
+                onPressed: () {
+                  setState(() {
+                    mytodo.removeAt(index);
+                  });
+                },
               ),
               title: Text(mytodo[index]),
             ),
